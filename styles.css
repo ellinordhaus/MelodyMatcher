@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Sansita One';
+    src: url('fonts/SansitaOne.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Sansita One', sans-serif;
+    background-color: #268EBA; 
+    overflow: hidden; 
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 5%; 
+    padding-top: 5%; 
+    color: #ffffff;
+    transition: opacity 0.25s ease;
+}
+
+.heading p {
+    margin: 0;
+    font-size: 3vw; 
+    text-align: left;
+}
+
+.question h2 {
+    font-size: 5vw; 
+    margin-top: 100px;
+    text-align: left;
+    width: 100%; 
+}
+
+.options {
+    width: 90%; 
+    padding: 20px 0;
+}
+
+.option-button {
+    display: block;
+    margin: 2vw 0;
+    padding: 1.5vw 2.5vw; 
+    border: none;
+    border-radius: 1vw;
+    background-color: #96becf; 
+    color: #ffffff;
+    font-size: 2vw; 
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.25s, width 0.5s, opacity 0.5s;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center; 
+    width: auto; 
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.option-button:not(:last-child) {
+    margin-right: 10px; 
+}
+
+.option-button:hover {
+    filter: brightness(90%);
+}
+
+.container.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.container.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+body, .heading p, .question h2, .option-button {
+    transition: background-color 0.5s ease, color 0.5s ease, width 0.5s ease;
+}
+
+.play-button {
+    
+    width: 2.2vw;
+    height: 2.5vw;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.back-button:hover{
+    opacity: .5;
+}
